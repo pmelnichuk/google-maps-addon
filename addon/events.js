@@ -24,7 +24,7 @@ const EVENTS = [
   'tilesloaded',
   'tilt_changed',
   'zoom_changed',
-  'overlaycomplete',
+  'rectanglecomplete',
 ];
 
 export default EVENTS;

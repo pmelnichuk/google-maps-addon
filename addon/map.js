@@ -52,6 +52,8 @@ export default Ember.Object.extend(ShapesManager, {
       });
       drawingManager.setMap(map);
 
+      this.owner.set("drawingManager", drawingManager);
+
       this.set("map", map);
 
     return map;
@@ -64,9 +66,15 @@ export default Ember.Object.extend(ShapesManager, {
   initializeMouseEventCallbacks() {
     let mapOptions = this.owner.get('mapOptions');
     let mapElement = this.owner.get('mapElement');
+    let drawingManager = this.owner.get('drawingManager');
     events.forEach(function(event) {
       if (typeof mapOptions[event] === 'function') {
-        google.maps.event.addListener(mapElement, event, mapOptions[event]);
+        if (event == "rectanglecomplete"){
+          google.maps.event.addListener(drawingManager, 'rectanglecomplete', mapOptions[event]);
+        }
+        else {
+          google.maps.event.addListener(mapElement, event, mapOptions[event]);
+        }
       }
     });
   }
