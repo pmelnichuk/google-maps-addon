@@ -7,7 +7,7 @@ import Marker from '../shapes/marker';
 import Circle from '../shapes/circle';
 import Rectangle from '../shapes/rectangle';
 import InfoWindow from '../shapes/info-window';
-import MarkersWithLabel from '../shapes/marker-with-label';
+import MarkersWithLabel from '../shapes/markers-with-label';
 
 
 const SHAPE_CLASS_MAP = {
