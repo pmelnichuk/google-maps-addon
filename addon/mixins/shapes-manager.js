@@ -7,7 +7,7 @@ import Marker from '../shapes/marker';
 import Circle from '../shapes/circle';
 import Rectangle from '../shapes/rectangle';
 import InfoWindow from '../shapes/info-window';
-import MarkerWithLabel from '../shapes/marker-with-label';
+import MarkersWithLabel from '../shapes/marker-with-label';
 
 
 const SHAPE_CLASS_MAP = {
@@ -15,7 +15,7 @@ const SHAPE_CLASS_MAP = {
   "circles": Circle,
   "rectangles": Rectangle,
   "infoWindows": InfoWindow,
-  "markerWithLabel": MarkerWithLabel,
+  "markersWithLabel": MarkersWithLabel,
 };
 
 export default Ember.Mixin.create({
