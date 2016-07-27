@@ -1,6 +1,6 @@
 {
   "name": "google-maps-addon",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Easy, intuitive google maps for your Ember project.",
   "directories": {
     "doc": "doc",
