@@ -23,7 +23,8 @@ const EVENTS = [
   'resize',
   'tilesloaded',
   'tilt_changed',
-  'zoom_changed'
+  'zoom_changed',
+  'overlaycomplete',
 ];
 
 export default EVENTS;
