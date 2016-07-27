@@ -38,6 +38,19 @@ export default Ember.Object.extend(ShapesManager, {
     let mapElement = this.owner.$('div.map-canvas')[0];
 
     this.set("map", new google.maps.Map(mapElement, mapOptions));
+    var drawingManager = new google.maps.drawing.DrawingManager({
+        drawingMode: google.maps.drawing.OverlayType.MARKER,
+        drawingControl: true,
+        drawingControlOptions: {
+          position: google.maps.ControlPosition.TOP_CENTER,
+          drawingModes: [
+            google.maps.drawing.OverlayType.RECTANGLE
+          ]
+        },
+        markerOptions: {icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'},
+
+      });
+      drawingManager.setMap(this.get("map"));
     return this.get("map");
   },
   /**
